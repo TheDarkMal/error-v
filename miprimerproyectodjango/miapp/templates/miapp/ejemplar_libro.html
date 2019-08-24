@@ -3,18 +3,22 @@
 {% block principal %}
 
 <h1>EJEMPLARES</h1>
-<table>
+<table border="3px">
         <th>ejempalr</th>
         <th>fecha de compra </th>
         <th>libro</th>
-</table>
-   
-{%for ejemplares in object_list %}
-<tr>
-<td>{{ejempalr.nuemroejemplar}}</td>
-<td>{{ejempalr.fechadecompra}}</td>
-<td>{{ejempalr.libro}}</td>
-</tr>
-{% endfor %} 
+        <th>editar</th>
+        <th>borrar</th>
 
-{% endblock }
+
+{%for ejemplar in object_list %}
+<tr>
+<td>{{ejemplar.numeroejemplar}}</td>
+<td>{{ejemplar.fechadecompra}}</td>
+<td>{{ejemplar.libro}}</td>
+<td><a href="#"></a></td>
+<td><a href="#"></a></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

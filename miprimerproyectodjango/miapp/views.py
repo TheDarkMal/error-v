@@ -40,5 +40,5 @@ class LibroDetalle(DetailView):
 
 class EjemplarList(ListView):
     model = Ejemplar
-    template_name = 'miapp/ejemplares_libro.html'
+    template_name = 'miapp/ejemplar_libro.html'
   #  success_url = reverse_lazy('listar_libros') 

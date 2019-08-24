@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import cargar_inicio, LibroList, LibroCreate,LibroUpdate,LibroDelete,LibroDetalle
+from .views import cargar_inicio, LibroList, LibroCreate,LibroUpdate,LibroDelete,LibroDetalle,EjemplarList
 
 urlpatterns = [
     path('', cargar_inicio, name = 'inicio'),
