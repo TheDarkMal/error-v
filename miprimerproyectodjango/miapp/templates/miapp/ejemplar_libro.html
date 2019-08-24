@@ -16,8 +16,8 @@
 <td>{{ejemplar.numeroejemplar}}</td>
 <td>{{ejemplar.fechadecompra}}</td>
 <td>{{ejemplar.libro}}</td>
-<td><a href="#"></a></td>
-<td><a href="#"></a></td>
+<td><a href="{% url 'actualizar_ejemplar' ejemplar.id %} ">editar</a></td>
+<td><a href="{% url 'Borrar_ejemplar' ejemplar.id %}">borrar</a></td>
 </tr>
 {% endfor %}
 </table>
