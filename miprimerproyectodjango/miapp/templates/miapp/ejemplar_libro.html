@@ -13,7 +13,7 @@
 
 {%for ejemplar in object_list %}
 <tr>
-<td>{{ejemplar.numeroejemplar}}</td>
+<td><a href="{% url 'detalle_ejemplar' ejemplar.id %}">{{ejemplar.numeroejemplar}}</a></td>
 <td>{{ejemplar.fechadecompra}}</td>
 <td>{{ejemplar.libro}}</td>
 <td><a href="{% url 'actualizar_ejemplar' ejemplar.id %} ">editar</a></td>

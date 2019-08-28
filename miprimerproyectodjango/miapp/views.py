@@ -52,3 +52,6 @@ class EjemplarUpdate(UpdateView):
     fields = ['numeroejemplar','fechadecompra','libro']
     template_name = 'miapp/ejemplar_actualizar.html'
     success_url = reverse_lazy('ejemplar_libro')
+class EjemplarDetalle(DetailView):
+    model = Ejemplar
+    template_name = 'miapp/ejemplar_detalle.html'
