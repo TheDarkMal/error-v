@@ -55,3 +55,8 @@ class EjemplarUpdate(UpdateView):
 class EjemplarDetalle(DetailView):
     model = Ejemplar
     template_name = 'miapp/ejemplar_detalle.html'
+class EjemplarCreate(CreateView):
+    model = Ejemplar
+    fields = ['numeroejemplar','fechadecompra','libro']
+    template_name = 'miapp/ejemplar_create.html'
+    success_url = reverse_lazy('listar_libros')
