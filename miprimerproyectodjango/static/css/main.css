@@ -1,10 +1,21 @@
-body{
+#body{
     background-color: royalblue;
+    font-family: 'Lexend Deca', sans-serif;
 }
 div{
 
-    background-color: yellow;
+    background-color: #255E69;
 }
 footer{
     background-color: cadetblue;
+}
+div li{
+float: left;
+list-style:none ;
+}
+a{
+    margin-left: 30px;
+}
+#titulo{
+    margin-left: 30px;
 }

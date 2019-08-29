@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block principal %}
+
+<table  class="table">
+        <tr>
+            <th>Fecha Prestamo</th>
+            <th>Nombre Cliente</th>
+            <th>Telefono</th>
+            <th>Estado</th>
+            <th>Editar</th>
+            <th>Borrar</th>
+        </tr>
+        {% for prestamo in object_list  %}
+            <tr >
+                <td><a href="#">{{ prestamo.fechaprestamo }}</a></td>
+                <td>{{ prestamo.nombre_cliente }}</td>
+                <td>{{ prestamo.telefono }}</td>
+                <td>{{ prestamo.estado }}</td>
+                <td><a href="{% url 'actualizar_prestamo' prestamo.id %}">Editar</a></td>
+                <td><a href="#">Borrar</a></td>
+            </tr>
+        {% endfor %}
+
+    </table>
+   
+
+    <a href="{% url 'prestamo_nuevo' %}">Nuevo Prestamo</a>
+    {% endblock %}

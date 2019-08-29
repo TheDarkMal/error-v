@@ -7,7 +7,9 @@ from django.views.generic.detail import DetailView
 
 from django.urls import reverse_lazy
 
-from .models import Libro,Ejemplar
+from .models import Libro,Ejemplar,Prestamo
+
+from django.contrib.auth.views import LoginView, LogoutView
 
 def cargar_inicio(request):
     return render(request, "miapp/index.html")
@@ -59,4 +61,18 @@ class EjemplarCreate(CreateView):
     model = Ejemplar
     fields = ['numeroejemplar','fechadecompra','libro']
     template_name = 'miapp/ejemplar_create.html'
-    success_url = reverse_lazy('listar_libros')
+    success_url = reverse_lazy('ejemplar_libro')
+class PrestamoList(ListView):
+    model = Prestamo
+    fields = ['fechaprestamo','nombre_cliente','telefono','estado']
+    template_name = 'miapp/prestamo_listas.html'
+class PrestamoCreate(CreateView):
+    model = Prestamo
+    fields = ['fechaprestamo','nombre_cliente','telefono','estado']
+    template_name = 'miapp/prestamo_create.html'
+    success_url = reverse_lazy('prestamo_lista')
+class PrestamoUpdate(UpdateView):
+    model = Prestamo
+    fields = ['fechaprestamo','nombre_cliente','telefono','estado']
+    template_name = 'miapp/prestamo_update.html'
+    success_url = reverse_lazy('prestamo_lista')

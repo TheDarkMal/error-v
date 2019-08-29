@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <div class="container">
 <body>
+
     <h1>Biblioteca</h1>
 
     <nav>
@@ -18,11 +20,12 @@
             <li><a href= "{% url 'inicio' %}"> Inicio </a></li>
             <li><a href= "{% url 'listar_libros' %}"> Libros </a></li>
             <li><a href= "{% url 'ejemplar_libro' %}"> Ejemplares </a></li>
-            <li><a href= "#"> Prestamos </a></li>
-            <li><a href= "#"> Iniciar sesión </a></li>
+            <li><a href= "{% url 'prestamo_lista' %}"> Prestamos </a></li>
+            <li><a href= "{% url 'login' %}"> Iniciar sesión </a></li>
+            <li>{{user.username}}</li>
         </ul>
     </nav>
-
+<br>    
   
     {%  block principal %}
         <p>Bloque principal para las paginas</p>
