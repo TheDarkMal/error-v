@@ -20,9 +20,13 @@
             <li><a href= "{% url 'inicio' %}"> Inicio </a></li>
             <li><a href= "{% url 'listar_libros' %}"> Libros </a></li>
             <li><a href= "{% url 'ejemplar_libro' %}"> Ejemplares </a></li>
+            {% if user.is_authenticated %}
             <li><a href= "{% url 'prestamo_lista' %}"> Prestamos </a></li>
+            <li><a href="{% url 'logout' %}">cerrar seccion</a></li>
+            {% else %}
             <li><a href= "{% url 'login' %}"> Iniciar sesión </a></li>
-            <li>{{user.username}}</li>
+            {% endif %}
+            <li id="UN">{{ user.username }}</li>
         </ul>
     </nav>
 <br>    

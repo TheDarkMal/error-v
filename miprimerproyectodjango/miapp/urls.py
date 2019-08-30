@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import cargar_inicio, LibroList, LibroCreate,LibroUpdate,LibroDelete,LibroDetalle,EjemplarList,EjemplarDelete,EjemplarUpdate,EjemplarDetalle,EjemplarCreate,PrestamoList,PrestamoCreate,PrestamoUpdate,LoginView,LogoutView
+from .views import (cargar_inicio, LibroList, LibroCreate,LibroUpdate,LibroDelete,LibroDetalle,EjemplarList,EjemplarDelete,EjemplarUpdate,EjemplarDetalle,
+EjemplarCreate,PrestamoList,PrestamoCreate,PrestamoUpdate,LoginView,LogoutView)
 
 urlpatterns = [
     path('', cargar_inicio, name = 'inicio'),
